@@ -1,3 +1,19 @@
+from langchain.chat_models import ChatOpenAI
+
+# chat 객체 만들기
+chat = ChatOpenAI(
+    model="gpt-4o-mini", 
+    max_tokens=150
+)
+
+from langchain.schema import BaseOutputParser
+
+class CommaOutputParser(BaseOutputParser):
+# split 하면, 입력한 문자를 기준으로, 문장을 나눠서, 그것을 배열에 넣어준다.
+    def parse(self, text):
+        items = text.split(",")
+        return list(map(str.strip,items))
+
 from langchain.prompts import ChatPromptTemplate
 
 template = ChatPromptTemplate.from_messages([
@@ -11,3 +27,5 @@ chain.invoke({
     "max_items":5,
     "question": "What are the pokemons?"
 })
+
+# output : ['pikachu', 'bulbasaur', 'charmander', 'squirtle', 'jigglypuff']
