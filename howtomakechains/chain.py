@@ -21,7 +21,7 @@ template = ChatPromptTemplate.from_messages([
     ("human", "{question}"),
 ])
 
-chain = template | chat | CommaOutputParser()
+chain = template | chat | CommaOutputParser() # template을 chat에 넣고, 그 결과를 CommaOutputParser에 넣은 것
 
 chain.invoke({
     "max_items":5,
