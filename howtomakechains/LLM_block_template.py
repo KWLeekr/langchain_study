@@ -9,6 +9,8 @@ from langchain.chat_models import ChatOpenAI
 # 여기서 설정할 수 있는 내용
 # AI모델
 # 맥스토큰
+# 아웃풋 스키마
+# Function_calling 등등...
 
 chat = ChatOpenAI(
     model="gpt-4o-mini", 
