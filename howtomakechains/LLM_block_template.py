@@ -51,7 +51,7 @@ chain = template | chat | CommaOutputParser()
 #-------------------------------------------
 # 아래는, dify 시작 부분에서 Placeholder(매개변수)와 sys.query 등을 집어넣는 코드라고 생각하자. (일단은)
 
-chain.invoke({
+response = chain.invoke({
     "max_items":5,
     "question": "What are the pokemons?"
 })
