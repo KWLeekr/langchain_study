@@ -29,3 +29,5 @@ chain.invoke({
 })
 
 # output : ['pikachu', 'bulbasaur', 'charmander', 'squirtle', 'jigglypuff']
+
+# 중요한 부분, 이 문법으로, chain = chain1 | chain2 | chain3 이런식으로 쓰면, chain1의 결과를 2로, 2의 결과를 3로 보낼 수 있음
