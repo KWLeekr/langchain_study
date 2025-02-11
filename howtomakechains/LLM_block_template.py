@@ -56,6 +56,7 @@ response = chain.invoke({
     "question": "What are the pokemons?"
 })
 
+# 여기서 리턴을 하든, 그 값을 다른데다가 돌려쓰든 마음대로 하면 된다.
 #-------------------------------------------
 
 
